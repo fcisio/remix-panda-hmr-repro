@@ -9,9 +9,15 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import "./index.css";
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
+
+// * This way of importing pandacss does not work either.
+// import pandacss from "./index.css";
+// export const links: LinksFunction = () => [{ rel: "stylesheet", href: pandacss }];
 
 export default function App() {
   return (

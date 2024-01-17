@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { css } from "@/css";
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,7 +10,10 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div
+      className={css({ bgColor: "primary" })}
+      style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}
+    >
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
